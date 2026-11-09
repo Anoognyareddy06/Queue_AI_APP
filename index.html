@@ -1,0 +1,481 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="QUEUE AI - Intelligent Queue Management System">
+    <title>QUEUE AI | Smart Queue Management</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header class="navbar">
+
+    <a href="#" class="logo">
+        <span class="logo-icon">Q</span>
+        QUEUE<span>AI</span>
+    </a>
+
+    <nav class="nav-links" id="navLinks">
+        <a href="#">Home</a>
+        <a href="#services">Services</a>
+        <a href="#how">How It Works</a>
+        <a href="#about">About</a>
+    </nav>
+
+    <div class="nav-actions">
+        <a href="dashboard.html" class="admin-btn">Admin Dashboard</a>
+        <a href="#token" class="primary-btn">Get Token ↗</a>
+    </div>
+
+    <button class="menu-btn" id="menuBtn">☰</button>
+
+</header>
+
+
+<!-- HERO SECTION -->
+
+<section class="hero">
+
+    <video class="hero-video" autoplay muted loop playsinline poster="assets/images/hero-campus.jpg">
+        <source src="assets/videos/hero-background.mp4" type="video/mp4">
+    </video>
+
+    <div class="hero-overlay"></div>
+
+    <div class="hero-content">
+
+        <div class="hero-badge">
+            <span class="live-dot"></span>
+            NEXT GENERATION QUEUE MANAGEMENT
+        </div>
+
+        <h1>
+            Waiting is the past.<br>
+            <span>Smart service is the future.</span>
+        </h1>
+
+        <p>
+            Experience intelligent queue management with QUEUE AI.
+            Generate digital tokens, track your position and save
+            valuable time across campuses, hospitals, banks and
+            service centres.
+        </p>
+
+        <div class="hero-buttons">
+            <a href="#token" class="primary-btn big-btn">
+                Get Your Token →
+            </a>
+
+            <a href="#how" class="secondary-btn">
+                Explore Platform
+            </a>
+        </div>
+
+        <div class="hero-stats">
+
+            <div>
+                <h3>24/7</h3>
+                <p>Digital Access</p>
+            </div>
+
+            <div>
+                <h3>Real-Time</h3>
+                <p>Queue Tracking</p>
+            </div>
+
+            <div>
+                <h3>AI Powered</h3>
+                <p>Wait Estimation</p>
+            </div>
+
+        </div>
+
+    </div>
+
+    <div class="floating-status">
+
+        <div class="status-top">
+            <span class="live-dot"></span>
+            LIVE QUEUE STATUS
+        </div>
+
+        <h2>Token A-024</h2>
+
+        <p>Your estimated waiting time</p>
+
+        <h3>~ 8 Minutes</h3>
+
+        <div class="progress">
+            <span></span>
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- TRUST STRIP -->
+
+<section class="trust-strip">
+
+    <p>ONE PLATFORM. MULTIPLE INDUSTRIES.</p>
+
+    <div class="trust-items">
+        <span>⌂ College</span>
+        <span>✚ Healthcare</span>
+        <span>▤ Banking</span>
+        <span>◈ Service Centres</span>
+    </div>
+
+</section>
+
+
+<!-- SERVICES -->
+
+<section class="services section" id="services">
+
+    <div class="section-heading">
+
+        <span class="section-tag">OUR SOLUTIONS</span>
+
+        <h2>
+            One platform.<br>
+            <span>Every queue simplified.</span>
+        </h2>
+
+        <p>
+            A unified digital queue management experience
+            designed for different service environments.
+        </p>
+
+    </div>
+
+
+    <div class="service-grid">
+
+        <div class="service-card">
+
+            <img src="assets/images/college.jpg" alt="College campus">
+
+            <div class="service-content">
+                <span>01 / EDUCATION</span>
+                <h3>College Services</h3>
+
+                <p>
+                    Admissions, fee payment, certificates,
+                    student support and administration.
+                </p>
+
+                <a href="#token" data-service="Student Services">
+                    Get Service →
+                </a>
+            </div>
+
+        </div>
+
+
+        <div class="service-card">
+
+            <img src="assets/images/hospital.jpg" alt="Hospital">
+
+            <div class="service-content">
+                <span>02 / HEALTHCARE</span>
+                <h3>Hospitals</h3>
+
+                <p>
+                    Patient registration, OPD appointments,
+                    diagnostics and pharmacy queues.
+                </p>
+
+                <a href="#token" data-service="Hospital OPD">
+                    Get Service →
+                </a>
+            </div>
+
+        </div>
+
+
+        <div class="service-card">
+
+            <img src="assets/images/banking.jpg" alt="Bank">
+
+            <div class="service-content">
+                <span>03 / FINANCE</span>
+                <h3>Banking Services</h3>
+
+                <p>
+                    Customer assistance, account services
+                    and teller counter management.
+                </p>
+
+                <a href="#token" data-service="Banking Desk">
+                    Get Service →
+                </a>
+            </div>
+
+        </div>
+
+
+        <div class="service-card">
+
+            <img src="assets/images/service-center.jpg" alt="Service centre">
+
+            <div class="service-content">
+                <span>04 / CUSTOMER SERVICE</span>
+                <h3>Service Centres</h3>
+
+                <p>
+                    Customer support, public service
+                    counters and document verification.
+                </p>
+
+                <a href="#token" data-service="Customer Support">
+                    Get Service →
+                </a>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- HOW IT WORKS -->
+
+<section class="how-section section" id="how">
+
+    <div class="section-heading">
+
+        <span class="section-tag">SIMPLE PROCESS</span>
+
+        <h2>
+            Three steps.<br>
+            <span>Zero unnecessary waiting.</span>
+        </h2>
+
+    </div>
+
+
+    <div class="steps-grid">
+
+        <div class="step-card">
+            <div class="step-number">01</div>
+            <div class="step-icon">▦</div>
+            <h3>Select a Service</h3>
+            <p>Choose your preferred location and service.</p>
+        </div>
+
+        <div class="step-card">
+            <div class="step-number">02</div>
+            <div class="step-icon">◎</div>
+            <h3>Generate Token</h3>
+            <p>Receive a unique digital queue token.</p>
+        </div>
+
+        <div class="step-card">
+            <div class="step-number">03</div>
+            <div class="step-icon">↗</div>
+            <h3>Track Your Turn</h3>
+            <p>Monitor queue progress and estimated waiting time.</p>
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- TOKEN GENERATION -->
+
+<section class="token-section section" id="token">
+
+    <div class="token-intro">
+
+        <span class="section-tag">GET STARTED</span>
+
+        <h2>
+            Your time matters.<br>
+            <span>Join the queue online.</span>
+        </h2>
+
+        <p>
+            Generate your digital token in seconds.
+            No need to stand in long physical queues.
+        </p>
+
+    </div>
+
+
+    <form class="token-form" id="tokenForm">
+
+        <h3>Generate Your Token</h3>
+
+        <label for="location">Choose Location</label>
+
+        <select id="location" required>
+            <option value="">Select Location</option>
+            <option>SR University - Student Services</option>
+            <option>CityCare Hospital</option>
+            <option>Metro Bank - Main Branch</option>
+            <option>OneStop Service Centre</option>
+        </select>
+
+
+        <label for="service">Choose Service</label>
+
+        <select id="service" required>
+            <option value="">Select Service</option>
+            <option>Student Services</option>
+            <option>Fee Payment</option>
+            <option>Admissions Desk</option>
+            <option>Hospital OPD</option>
+            <option>Diagnostics</option>
+            <option>Banking Desk</option>
+            <option>Customer Support</option>
+        </select>
+
+
+        <label for="name">Full Name</label>
+
+        <input
+            type="text"
+            id="name"
+            placeholder="Enter your name"
+            maxlength="40"
+            required
+        >
+
+
+        <label for="phone">Mobile Number</label>
+
+        <input
+            type="tel"
+            id="phone"
+            placeholder="Enter 10-digit mobile number"
+            pattern="[0-9]{10}"
+            required
+        >
+
+
+        <button type="submit" class="primary-btn submit-btn">
+            Generate My Token →
+        </button>
+
+        <p class="form-note">
+            Demo prototype · Details are stored only in this browser.
+        </p>
+
+    </form>
+
+</section>
+
+
+<!-- ABOUT -->
+
+<section class="about-section section" id="about">
+
+    <div class="about-content">
+
+        <span class="section-tag">WHY QUEUE AI?</span>
+
+        <h2>
+            Making everyday<br>
+            <span>services smarter.</span>
+        </h2>
+
+        <p>
+            QUEUE AI aims to transform traditional queue
+            management into an intelligent, transparent and
+            convenient digital experience.
+        </p>
+
+    </div>
+
+    <div class="about-features">
+
+        <div>
+            <span>✳</span>
+            <h3>Intelligent Estimation</h3>
+            <p>Estimate waiting time using queue activity.</p>
+        </div>
+
+        <div>
+            <span>◷</span>
+            <h3>Real-Time Visibility</h3>
+            <p>Keep visitors informed about queue progress.</p>
+        </div>
+
+        <div>
+            <span>⌘</span>
+            <h3>Centralised Dashboard</h3>
+            <p>Allow staff to manage tokens efficiently.</p>
+        </div>
+
+        <div>
+            <span>↗</span>
+            <h3>Better Experience</h3>
+            <p>Reduce uncertainty and improve service flow.</p>
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- FOOTER -->
+
+<footer class="footer">
+
+    <a href="#" class="logo">
+        <span class="logo-icon">Q</span>
+        QUEUE<span>AI</span>
+    </a>
+
+    <p>Smarter queues. Better experiences.</p>
+
+    <p>© 2026 QUEUE AI. All rights reserved.</p>
+
+</footer>
+
+
+<!-- TOKEN SUCCESS POPUP -->
+
+<div class="modal" id="tokenModal">
+
+    <div class="modal-content">
+
+        <button class="close-modal" id="closeModal">×</button>
+
+        <div class="success-icon">✓</div>
+
+        <h2>Token Generated!</h2>
+
+        <p>Your queue token number is</p>
+
+        <h1 id="generatedToken">A-025</h1>
+
+        <div class="token-details">
+            <p id="tokenService">Student Services</p>
+            <p id="tokenWait">Estimated wait: 8 minutes</p>
+        </div>
+
+        <a href="dashboard.html" class="primary-btn">
+            View Queue Status →
+        </a>
+
+    </div>
+
+</div>
+
+
+<script src="app.js"></script>
+
+</body>
+</html>
