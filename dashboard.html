@@ -1,0 +1,201 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Queue AI | Admin Dashboard</title>
+    <link rel="stylesheet" href="dashboard.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<div class="dashboard-layout">
+
+    <!-- SIDEBAR -->
+    <aside class="sidebar">
+        <a href="index.html" class="brand">
+            <span class="brand-icon">Q</span>
+            <span>QUEUE<span class="brand-highlight">AI</span></span>
+        </a>
+
+        <div class="sidebar-label">WORKSPACE</div>
+
+        <nav class="sidebar-nav">
+            <a href="dashboard.html" class="nav-link active">
+                <span>▦</span> Overview
+            </a>
+            <a href="#queue-section" class="nav-link">
+                <span>☷</span> Live Queue
+            </a>
+            <a href="#analytics-section" class="nav-link">
+                <span>◷</span> Analytics
+            </a>
+        </nav>
+
+        <div class="sidebar-bottom">
+            <div class="admin-card">
+                <div class="admin-avatar">A</div>
+                <div>
+                    <strong>Administrator</strong>
+                    <small>Queue Manager</small>
+                </div>
+            </div>
+            <a href="index.html" class="back-link">← Back to Website</a>
+        </div>
+    </aside>
+
+    <!-- MAIN CONTENT -->
+    <main class="main-content">
+
+        <header class="topbar">
+            <div>
+                <div class="eyebrow">QUEUE MANAGEMENT SYSTEM</div>
+                <h1>Dashboard Overview</h1>
+                <p>Monitor and manage your service queues in real time.</p>
+            </div>
+
+            <div class="topbar-right">
+                <div class="live-indicator">
+                    <span class="live-dot"></span> System Active
+                </div>
+                <div class="date-display" id="currentDate"></div>
+            </div>
+        </header>
+
+        <!-- WELCOME BANNER -->
+        <section class="welcome-banner">
+            <div>
+                <span class="banner-tag">QUEUE AI CONTROL CENTER</span>
+                <h2>Manage your queues smarter.</h2>
+                <p>Track customer flow, call the next token and keep services moving.</p>
+            </div>
+            <div class="banner-decoration">Q</div>
+        </section>
+
+        <!-- STATISTICS -->
+        <section class="stats-grid" id="analytics-section">
+
+            <article class="stat-card">
+                <div class="stat-top">
+                    <span>Total Tokens</span>
+                    <span class="stat-icon purple">▤</span>
+                </div>
+                <h2 id="totalTokens">0</h2>
+                <p>All registered tokens</p>
+            </article>
+
+            <article class="stat-card">
+                <div class="stat-top">
+                    <span>Waiting</span>
+                    <span class="stat-icon orange">◷</span>
+                </div>
+                <h2 id="waitingCount">0</h2>
+                <p>Customers in queue</p>
+            </article>
+
+            <article class="stat-card">
+                <div class="stat-top">
+                    <span>Currently Serving</span>
+                    <span class="stat-icon blue">↗</span>
+                </div>
+                <h2 id="servingCount">0</h2>
+                <p>Active service tokens</p>
+            </article>
+
+            <article class="stat-card">
+                <div class="stat-top">
+                    <span>Completed</span>
+                    <span class="stat-icon green">✓</span>
+                </div>
+                <h2 id="completedCount">0</h2>
+                <p>Successfully served</p>
+            </article>
+
+        </section>
+
+        <!-- CURRENTLY SERVING -->
+        <section class="current-serving-card">
+            <div>
+                <span class="section-kicker">NOW SERVING</span>
+                <h2 id="currentToken">---</h2>
+                <p id="currentCustomer">No customer is currently being served.</p>
+            </div>
+            <div class="serving-status">
+                <span class="live-dot"></span> LIVE STATUS
+            </div>
+        </section>
+
+        <!-- QUEUE MANAGEMENT -->
+        <section class="queue-section" id="queue-section">
+
+            <div class="section-heading">
+                <div>
+                    <span class="section-kicker">CUSTOMER MANAGEMENT</span>
+                    <h2>Live Queue</h2>
+                    <p>View, filter and manage customer tokens.</p>
+                </div>
+
+                <button class="primary-button" id="callNextBtn">
+                    <span>▶</span> Call Next Token
+                </button>
+            </div>
+
+            <div class="queue-toolbar">
+                <div class="search-box">
+                    <span>⌕</span>
+                    <input type="text" id="searchInput" placeholder="Search token or customer...">
+                </div>
+
+                <select id="statusFilter">
+                    <option value="All">All Status</option>
+                    <option value="Waiting">Waiting</option>
+                    <option value="Serving">Serving</option>
+                    <option value="Completed">Completed</option>
+                </select>
+            </div>
+
+            <div class="table-wrapper">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>TOKEN ID</th>
+                            <th>CUSTOMER</th>
+                            <th>SERVICE</th>
+                            <th>PHONE</th>
+                            <th>STATUS</th>
+                            <th>ACTION</th>
+                        </tr>
+                    </thead>
+                    <tbody id="queueTableBody">
+                        <tr>
+                            <td colspan="6" class="empty-state">
+                                No tokens available yet. Create a token from the home page.
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="table-footer">
+                <span id="resultCount">Showing 0 tokens</span>
+                <button class="text-button" id="refreshBtn">↻ Refresh Queue</button>
+            </div>
+
+        </section>
+
+        <footer class="dashboard-footer">
+            <span>© 2026 Queue AI. Smart Queue Management.</span>
+            <span>Designed for smarter service experiences.</span>
+        </footer>
+
+    </main>
+</div>
+
+<div class="toast" id="toast"></div>
+
+<script src="dashboard.js"></script>
+</body>
+</html>
